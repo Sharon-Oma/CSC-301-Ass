@@ -1,0 +1,14 @@
+Differences between Stacks and Queues
+
+Principle - LIFO (Last In, First Out) (Stacks), while FIFO (First In, First Out) (Queues).
+
+2. Main Operations --Push(Insertion) and Pop (Removal) (Stacks) while, Enqueue (Insertion) and Dequeue (Removal) (Queues).
+
+3. Access Point-- Both insertion and removal occur at the Top of the structure (Stacks) while Insertion occurs at the Rear/Tail. Removal occurs at the Front/Head.(Queues)
+
+4. Pointers/Indices --Typically only needs one pointer to track the Top element (Stacks) while, Requires two pointers (Front and Rear) to manage both ends.(Queues)
+5. Analogy-- A stack of trays in a cafeteria (the last tray placed on top is the first one taken)(Stacks). A line of customers at a bank (the first person in line is the first one served).(Queues)
+
+Time Complexity of both
+
+The time complexity for the core operations (insertion and removal) in both Stacks and Queues is O(1) (Constant Time), then for search and access O(n) for both.

@@ -1,0 +1,33 @@
+Linear Search
+Time Complexity: O(n)
+Best Case O(1): The target element is the very first element 
+in the list. The algorithm finds it immediately in one step.
+Average/Worst Case O(n):
+Average: The target is somewhere in the middle.
+Worst: The target element is the very last element, or the 
+target is not in the list at all. The algorithm must check 
+all n elements.
+
+Space Complexity: O(1)
+It only requires a fixed, small amount of extra memory to 
+store loop variables (like the index i), regardless of the 
+size of the input list n.
+
+Binary Search 
+Time Complexity: O(log n)
+Best Case O(1): The target element is found on the first 
+comparison (it's the middle element).
+Average/Worst Case O(log n):In the worst case, the algorithm 
+eliminates half of the remaining elements in each step.6 The 
+number of steps required to narrow down a list of size n is 
+log base 2 n. This makes it much faster than linear search 
+for large lists.
+
+Space Complexity:O(1)
+Binary Search can be implemented iteratively (using a loop) 
+or recursively.Iterative: Uses a fixed amount of extra space 
+for pointers (low, high, mid), resulting in O(1) space 
+complexity.Recursive: While still very efficient, the 
+recursive calls use the call stack, which can lead to O(log 
+n) space complexity in the worst case, though O(1) is 
+generally cited for the iterative implementation.

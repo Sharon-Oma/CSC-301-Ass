@@ -1,0 +1,69 @@
+def total_sum(arr):
+    total = 0
+    for i in arr:
+        total += i
+    return total
+
+the_list = [1, 2, 3, 4, 7]
+
+print(total_sum(the_list))
+
+Time Complexity = O(n)
+Space complexity = O(1)
+
+Arrays store elements in contiguous (adjacent) memory locations while Linked Lists, store elements in non-contiguous memory locations. 
+
+The best case for insertion (at the head) is O(1), while the worst case (at the end or middle without a direct pointer) is O(n)
+
+Key differences between Primitive Data type and Abstract Data type
+
+Definition  
+PDT
+Basic building blocks, directly supported by the programming language and CPU.
+ADT
+A logical model or specification of a data type and the operations that can be performed on it.
+
+Focus 
+PDT
+How the data is stored (memory size, bit representation).
+ADT
+What the data represents and what operations are allowed (behavior).
+
+Implementation
+PDT
+Directly maps to hardware types (e.g., a 32-bit integer).
+ADT
+Can be implemented using primitive types or other ADTs (e.g., a Queue can be implemented using an array or a linked list).
+
+Examples
+PDT
+int, float, char, boolean.
+ADT
+Stack, Queue, List, Tree, Graph.
+
+Why arrays are considered Static:
+->An array's size is fixed at the time it is created.
+->The memory for the array is allocated as a single, contiguous block in memory.
+->Changing the size (e.g., making it larger) requires creating a completely new array and copying all the elements over, which is an expensive O(n) operation.
+
+Why linked Lists are considered Dynamic:
+->A linked list's size can grow or shrink dynamically at runtime.
+->It is composed of individual nodes that are stored in non-contiguous memory locations.
+->New nodes can be allocated and linked easily by updating pointers, making insertion and deletion O(1) at the ends (or O(n) to find the middle).
+
+Situations you would prefer a linked list over an array:
+->Frequent Insertions/Deletions: If your application involves a lot of adding and removing elements, especially in the middle of the sequence (e.g., maintaining a playlist or waiting list).
+
+->Unknown or Highly Variable Size: If you don't know the maximum number of elements needed or if the number changes drastically during execution, a linked list avoids wasting memory (by allocating too much) or running out of space (by allocating too little).
+
+->No Random Access Needed: If you only process elements sequentially (from start to finish), as random access by index is much slower in a linked list O(n) than in an array O(1).
+
+Stack
+Undo/Redo Feature in Software {LIFO} -- Each action (typing, deleting, formatting) is Pushed onto the stack. When a user clicks "Undo," the last action is Popped off and reversed.
+
+Queue
+Print Spooling/Task Scheduling {FIFO} -- When multiple users send documents to a shared printer, the requests are added (Enqueued) to the queue in the order they arrive. The printer processes the first request (Dequeued) first.
+
+Linked List
+Web Browser History/Image Carousel -- Each page/image is a node that points to the next and previous page/image. This allows for easy and fast insertion of new history items without having to shift memory like an array would.
+
